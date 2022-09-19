@@ -42,6 +42,9 @@
   font-size:22px;
   font-weight:bold;
  }
+  #btn:hover{
+  color:red;
+ }
  #view{
   margin:auto;
   margin-top:100px;

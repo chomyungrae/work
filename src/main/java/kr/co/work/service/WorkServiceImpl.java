@@ -32,7 +32,17 @@ public class WorkServiceImpl implements WorkService {
 		String wid=request.getParameter("wid");
 		
 		String dbapply=mapper.getApply(wid);
-		String inapply=dbapply+","+userid; 
+		
+		String inapply;
+		
+		if(dbapply==null) // 빈값일떄 id1
+		{
+			inapply=userid;
+		}
+		else // 값있을떄 id1+","+id2;
+		{
+			inapply=dbapply+","+userid; 
+		}
 		
 		mapper.apply(inapply,wid);
 		
