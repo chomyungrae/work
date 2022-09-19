@@ -7,11 +7,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link href="<c:url value="/resources/css/myinfo.css" />" rel="stylesheet"> <!--  css 불러오기 -->
 <style>
 section {
-	width: 1000px;
-	height: 600px;
+	width: 80%;
+	height: 800px;
 	margin: auto;
+	/* background:#eeeeee; */
 
     
 }
@@ -19,65 +21,53 @@ section {
   text-decoration:none;
   color:black;
  }
- .myTab{
- margin-top:50px;
- margin-left:0px;
- width:700px;
-  position:relative;
- 
+ #myTab{
+ margin:auto;
+ margin-top:100px;
+ width:800px;
+ height:60px;
+/*  
+ background: yellow; */
   }
  
- .main li{
-  list-style-type:none;
-  display:inline-block;
-  width:150px;
-  height:30px;
-  border:1px solid #cccccc;
-  border-left:0px;
-  margin-left:0px;
-  text-align:center;
-   padding-top:10px;
-    padding-bottom:5px;
-    font-weight:bold;
- }
- .main .sub1
- { 
-  background:skyblue;
- }
  #tb
  {
-  margin-top:0px;
- width:800px;
+ margin:auto;
+  width:80%;
   height:400px;
-  position:absolute;
-  text-align:center;
+ 
+ 
  }
  #tb table{
+  border-top:3px solid #3d88eb;
    border-spacing: 0 10px;
- }
  
+ }
+ #tb table tr:first-child td{
+  border-top:0px;
+ }
  #tb table td:first-child{
    width:150px;
-   border-top:2px solid skyblue;
+   border-top:1px solid #3d88eb;
    font-weight:bold;
-  
  }
- table td{
+  #tb table td:last-child{
+   text-align:center;
+  }
+#tb table td{
   padding-top:5px;
-  height:30px;
+  height:50px;
  }
 
 </style>
 </head>
 <body>
 <section>
- <div class="myTab">
-  <ul class="main">
-   <li class="sub1"><a href="myinfo">회원정보수정</a></li><li class="sub2"><a href="reserve_info">예약조회</a></li><li class="sub3"><a href="my_qna">문의내역</a></li>
-  </ul>
+ <div id="myTab">
+ <a class="tab" href="myinfo">회원정보</a><a class="tab" href="information">이력서관리</a><a class="tab" href="#">지원내역</a>
   </div>
  <div id="tb"> 
-  <table width="800px">
+  <table width="800" align="center">
   <tr>
     <td> * 아이디 </td>
     <td>${mvo.userid} </td>

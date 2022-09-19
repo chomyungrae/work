@@ -9,8 +9,8 @@
   </select>
   
   <insert id="member_input_ok" parameterType="kr.co.work.vo.MemberVO">
-   insert into member(userid,pwd,name,ymd,phone,email,writeday)
-   values(#{userid},#{pwd},#{name},#{ymd},#{phone},#{email},now())
+   insert into member(userid,pwd,name,ymd,phone,email,writeday,gender)
+   values(#{userid},#{pwd},#{name},#{ymd},#{phone},#{email},now(),${gender})
   </insert>
   <select id="check_userid" resultType="Integer">
    select count(*) from member where userid=#{param1}

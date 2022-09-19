@@ -136,7 +136,11 @@ public class MemberController {
 	    	return service.member_out_ok(session,request);
 	    }
 	    
-	   
+	   @RequestMapping("/mypage/information")
+	   public String information()
+	   {
+		   return "/mypage/information";
+	   }
 	   
 	   
 }

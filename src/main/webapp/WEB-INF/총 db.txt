@@ -1,0 +1,52 @@
+
+
+create table member(
+    id int auto_increment primary key,
+    userid varchar(20) unique,
+   pwd varchar(20),
+    name varchar(20),
+     ymd varchar(20),
+    phone varchar(20),
+    email varchar(50),   
+   writeday datetime,
+   state int default 0,
+  gender int not null);
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+create table work(
+id int auto_increment primary key,
+workday date,
+workname varchar(50),
+workplace varchar(50),
+content text,
+gender int default 0,
+pay int,
+start_time char(20),
+close_time char(20),
+inwon int,
+state int default 0,
+writeday date,
+day int,
+paytype int,
+apply char(255));
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+create table info(
+id int auto_increment primary key,
+userid varchar(20) unique,
+bank char(20),
+account int,
+photo varchar(100),
+info_title char(50),
+info_content text 
+);
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+create table career(
+id int auto_increment primary key,
+userid varchar(20) unique,
+company varchar(20),
+job varchar(50),
+start_day date,
+end_day date
+);

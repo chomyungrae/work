@@ -42,7 +42,15 @@ section #main input[type=submit]{
  border-radius:20px;
 }
 
-
+#gen {
+ width:250px;
+ height:30px;
+ text-align:center;
+}
+#gen input[type=radio]{
+ width:20px;
+ height:20px;
+}
 </style>
 <script>
 var uchk=0; //사용자가 아이디의 중복체크 결과값을 가진다 1 =가능 0=불가능
@@ -206,6 +214,9 @@ function check_userid(userid)  // 아이디 입력부분 중복 & 글자수 체�
      
      <div>* 이름</div>
      <div><input type="text" name="name" required></div>
+     
+     <div>* 성별</div>
+     <div id="gen">남자 <input type="radio" name="gender" value="1"> 여자 <input type="radio" name="gender" value="2"></div>
      
      <div>* 생년월일</div>
      <div>

@@ -1,8 +1,16 @@
 package kr.co.work.vo;
 
 public class MemberVO {
-	private int id, state;
+	private int id, state,gender;
 	private String userid, pwd, name, ymd, phone, email,writeday;
+	
+	
+	public int getGender() {
+		return gender;
+	}
+	public void setGender(int gender) {
+		this.gender = gender;
+	}
 	public int getId() {
 		return id;
 	}
