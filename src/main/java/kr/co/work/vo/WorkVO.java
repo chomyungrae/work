@@ -1,11 +1,34 @@
 package kr.co.work.vo;
 
+import java.sql.Date;
+import java.time.LocalDate;
+
 public class WorkVO {
- private int id,gender,pay,time,inwon,state;
+ private int id,gender,pay,time,inwon,state,paytype;
  private String workday,workname,workplace,content,writeday,start_time,close_time;
- 
+
+ private int day; // 월,화,수,목..
  
 
+
+public int getPaytype() {
+	return paytype;
+}
+public void setPaytype(int paytype) {
+	this.paytype = paytype;
+}
+public int getDay() {
+	return day;
+}
+public void setDay(int day) {
+	this.day = day;
+}
+public String getWorkday() {
+	return workday;
+}
+public void setWorkday(String workday) {
+	this.workday = workday;
+}
 public String getStart_time() {
 	return start_time;
 }
@@ -60,12 +83,7 @@ public int getState() {
 public void setState(int state) {
 	this.state = state;
 }
-public String getWorkday() {
-	return workday;
-}
-public void setWorkday(String workday) {
-	this.workday = workday;
-}
+
 public String getWorkname() {
 	return workname;
 }

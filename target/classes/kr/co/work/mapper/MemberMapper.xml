@@ -5,7 +5,7 @@
   <mapper namespace="kr.co.work.mapper.MemberMapper">
   
   <select id="work_list" resultType="kr.co.work.vo.WorkVO">
-   select * from work order by workday asc
+   select * from work where day like concat('%',#{param1},'%') order by workday asc
   </select>
   
   <insert id="member_input_ok" parameterType="kr.co.work.vo.MemberVO">
@@ -26,7 +26,6 @@
   <select id="login_ok" resultType="kr.co.work.vo.MemberVO">
    select * from member where userid=#{userid} and pwd=#{pwd}
   </select>
-  
   
   
   <select id="myinfo" resultType="kr.co.work.vo.MemberVO">

@@ -1,6 +1,7 @@
 package kr.co.work.service;
 
 import java.io.PrintWriter;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,10 +28,20 @@ public class MemberServiceImpl implements MemberService {
 	
 	// 홈 리스트 출력
 	@Override
-	public String home(Model model) {
-		ArrayList<WorkVO> wlist=mapper.work_list();
+	public String home(Model model,HttpServletRequest request) {
 		
-		
+		String day;
+		if(request.getParameter("day")==null)
+		{
+			day="";
+		}
+		else
+			{
+			day=request.getParameter("day");
+			}
+			
+		ArrayList<WorkVO> wlist=mapper.work_list(day);
+	  
 		model.addAttribute("wlist",wlist);
 		return "/main/home";
 	}

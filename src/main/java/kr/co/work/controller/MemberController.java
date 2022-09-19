@@ -27,9 +27,9 @@ public class MemberController {
 		return "redirect:/main/home";
 	}
 	@RequestMapping("/main/home")
-	public String home(Model model)
+	public String home(Model model,HttpServletRequest request)
 	{
-		return service.home(model);
+		return service.home(model,request);
 	}
 	
 	// 회원가입부분

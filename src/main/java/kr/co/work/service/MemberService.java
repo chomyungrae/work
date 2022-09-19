@@ -12,7 +12,7 @@ import kr.co.work.vo.MemberVO;
 public interface MemberService {
 
 	//홈
-	public String home(Model model);
+	public String home(Model model,HttpServletRequest request);
 	
 	//회원가입
 	public String member_input_ok(MemberVO mvo);

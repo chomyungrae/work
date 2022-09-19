@@ -8,7 +8,7 @@ import kr.co.work.vo.WorkVO;
 public interface MemberMapper {
 	
 	//홈 일자리 리스트
-	public ArrayList<WorkVO> work_list();
+	public ArrayList<WorkVO> work_list(String day);
 
 	public void member_input_ok(MemberVO mvo);
 	public int check_userid(String userid);
