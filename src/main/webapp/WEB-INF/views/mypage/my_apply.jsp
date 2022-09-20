@@ -76,6 +76,7 @@ section {
     <td>시급/일급</td>
    </tr>
  </table>
+
 </div>
 </section>
 </body>

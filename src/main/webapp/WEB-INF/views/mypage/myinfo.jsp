@@ -105,6 +105,23 @@ section {
   </tr>
  </table>
 </div>
+
+<!-- <script>
+ function check(my)
+ {
+	 
+	 if(my.haha.value !=checked)
+		 {
+		 alert("하나선택하세요");
+		 return false;
+		 }
+ }
+</script>
+ <form method="post" action="aa" onsubmit="return check(this)">
+  1번<input type="radio" name="haha" value="0"><p>
+  1번<input type="radio" name="haha" value="2" checked>
+  <input type="submit" value="전송">
+ </form> -->
 </section>
 </body>
 </html>

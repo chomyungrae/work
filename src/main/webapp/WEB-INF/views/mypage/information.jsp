@@ -35,7 +35,7 @@ section {
  {
  margin:auto;
   width:80%;
-  height:400px;
+  height:740px;
  
  
  }
@@ -153,8 +153,9 @@ width:150px;
    <td><textarea cols="40" rows="4"></textarea></td>
   </tr>
  </table>
+  
   <div id="outer">
-  <span id="aa">
+  <div id="aa">
   <table class="tb2" id="tb2" width="800" align="center">
   <caption><span id="left">경력사항<font size="3px">(근무경력 있는 분만 작성)</font></span>
   <span class="add" onclick="form_add()">+경력추가</span></caption>
@@ -177,10 +178,27 @@ width:150px;
    <input class="del" type="button" onclick="form_del()" value="삭제"></td> 
   </tr>
   </table>
- </span> 
+   </div>
   </div>
-</div>
 
+<style>
+ section #end{
+
+ width:60%;
+ height:50px;
+  margin:auto;
+  text-align:center;
+ }
+ section #end input{
+  width:400px;
+  height:50px;
+  font-size:22px;
+ }
+
+</style>
+
+</div>
+ <div id="end"><input type="submit" value="작성"></div>
 
 </section>
 </body>
