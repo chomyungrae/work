@@ -52,7 +52,7 @@ public class MemberServiceImpl implements MemberService {
 	{
 		
 		 mapper.member_input_ok(mvo);
-		return "redirect:/member/member_input_final"; // 나중에 /login/login 따로만들기
+		return "redirect:/main/home"; // 나중에 /login/login 따로만들기
 	}
 
 	@Override
@@ -193,6 +193,14 @@ public class MemberServiceImpl implements MemberService {
 				 return "redirect:/mypage/member_out?err=1"; 
 		    }
 			 
+		}
+
+
+		@Override
+		public String my_apply(Model model,HttpSession session) {
+			String userid=session.getAttribute("userid").toString(); 
+			mapper.my_apply(userid);
+			return "mypage/my_apply";
 		}
 
 		

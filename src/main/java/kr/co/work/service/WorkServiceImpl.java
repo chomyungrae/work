@@ -46,7 +46,7 @@ public class WorkServiceImpl implements WorkService {
 		
 		mapper.apply(inapply,wid);
 		
-		return "/work";
+		return "redirect:/work/work_content?id="+wid;
 	}
 
 }

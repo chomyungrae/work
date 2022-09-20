@@ -141,6 +141,10 @@ public class MemberController {
 	   {
 		   return "/mypage/information";
 	   }
-	   
+	   @RequestMapping("/mypage/my_apply")
+	   public String my_apply(Model model,HttpSession session)
+	   {
+		   return service.my_apply(model,session);
+	   }
 	   
 }

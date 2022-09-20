@@ -32,5 +32,7 @@ public interface MemberService {
 		public String my_update(HttpSession session,Model model);
 		public String my_update_ok(MemberVO mvo,HttpSession session);
 		public String member_out_ok(HttpSession session,HttpServletRequest request);
-			
+   
+		public String my_apply(Model model,HttpSession session);
+
 }

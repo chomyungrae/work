@@ -78,12 +78,18 @@
  
  function apply(){
   
-	 confirm("${wvo.workday}일 ${wvo.workname} 근무를 신청하시겠습니까?")
+	 if(confirm("${wvo.workday}일 ${wvo.workname} 근무를 신청하시겠습니까?")){
+		
 			 {
 		   alert("   신청완료\n담당자 확인 후 연락드리겠습니다");
 		   location="../work/apply?wid=${wvo.id}";
 			 }
-	 
+	 }
+	 else{
+		 return false;
+		 
+	 }
+
  }
 </script>
 </head>

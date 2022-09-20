@@ -51,4 +51,8 @@
    update member set state=1 where userid=#{param1}
   </update>  
   
+  
+  <select id="my_apply" resultType="kr.co.work.vo.WorkVO">
+   select * from work where userid=#{parma1}
+  </select>
   </mapper>

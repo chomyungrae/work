@@ -64,7 +64,7 @@ section {
 <body>
 <section>
  <div id="myTab">
- <a class="tab" href="myinfo">회원정보</a><a class="tab" href="information">이력서관리</a><a class="tab" href="#">지원내역</a>
+ <a class="tab" href="myinfo">회원정보</a><a class="tab" href="information">이력서관리</a><a class="tab" href="my_apply">신청내역</a>
   </div>
  <div id="tb"> 
   <table width="800" align="center">

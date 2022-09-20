@@ -15,4 +15,6 @@
     <update id="apply">
      update work set apply=#{param1} where id=#{param2}
     </update>
+    
+
   </mapper>

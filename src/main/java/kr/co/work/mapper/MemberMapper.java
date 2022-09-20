@@ -29,4 +29,6 @@ public interface MemberMapper {
     
     public int check_member(String userid,String pwd);
     public void member_state1(String userid);
+    
+    public ArrayList<WorkVO> my_apply(String userid);
 }
