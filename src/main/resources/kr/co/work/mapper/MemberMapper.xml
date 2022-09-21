@@ -28,40 +28,4 @@
   </select>
   
   
-  <select id="myinfo" resultType="kr.co.work.vo.MemberVO">
-   select * from member where userid=#{param1}
-  </select>
-  
-   <select id="get_dbpwd" resultType="String">
-   select pwd from member where userid=#{param1} and pwd=#{param2}
-  </select>
-  <update id="pwd_change_ok">
-   update member set pwd=#{param2} where userid=#{param1}
-  </update>
-  
-  <update id="my_update_ok">
-   update member set name=#{name}, ymd=#{ymd},
-   phone=#{phone}, email=#{email} where userid=#{userid}
-  </update>
-  
-  <select id="check_member" resultType="Integer">
-   select count(*) from member where userid=#{param1} and pwd=#{param2}
-  </select>
-  <update id="member_state1">
-   update member set state=1 where userid=#{param1}
-  </update>  
-  
-  
-  <select id="my_apply" resultType="kr.co.work.vo.WorkVO">
-  select w.*,a.state as astate,a.writeday as awriteday,a.userid from apply as a,work as w 
-  where w.id=a.workid and userid=#{param1} order by w.workday asc
-  </select>
-  
-  <select id="information" resultType="kr.co.work.vo.InfoVO">
-   select * from info where userid=#{param1}
-  </select>  
-  <insert id="info_input_ok">
-   insert into info(userid,bank,account,photo,info_title,info_content)
-   values(#{userid},#{bank},#{account},#{photo},#{info_title},#{info_content})
-  </insert>
   </mapper>

@@ -28,13 +28,20 @@ writeday date,
 day int,
 paytype int);
 
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+create table apply(
+ id int auto_increment primary key,
+ workid int,
+ state int,
+ writeday datetime,
+ userid char(20));
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 create table info(
 id int auto_increment primary key,
 userid varchar(20) unique,
 bank char(20),
-account int,
+account char(20),
 photo varchar(100),
 info_title char(50),
 info_content text 

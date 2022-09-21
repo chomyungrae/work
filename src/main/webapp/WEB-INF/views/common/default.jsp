@@ -157,8 +157,8 @@ footer {
 	<div id="topMenu">
 	<ul>
 	    <li><a class="menuLink" href="#">▷&nbsp;&nbsp; 전체메뉴 </a></li>
-		<li><a class="menuLink" href="#">일일 알바정보</a></li>
-		<li><a class="menuLink" href="#">장단기 알바정보</a></li>
+		<li><a class="menuLink" href="../work/shortwork">일일 알바정보</a></li>
+		<li><a class="menuLink" href="../work/longwork">장단기 알바정보</a></li>
 		<li><a class="menuLink" href="#">공지사항</a></li>
 		<li><a class="menuLink" href="#">자유게시판</a></li>
 

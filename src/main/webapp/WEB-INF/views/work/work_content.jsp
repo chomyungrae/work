@@ -90,6 +90,16 @@
 	
  });
  
+ function apply()
+ {
+	 <c:if test="${empty userid}">
+		  alert("로그인 후 이용가능합니다 ");
+          location="../member/login";
+	</c:if>
+	 <c:if test="${!empty userid}">
+		 location="../work/apply?wid=${wvo.id}"; 
+     </c:if>		 
+ }
  
 
 </script>
@@ -149,8 +159,16 @@
   
     <tr>
      <td colspan="2" align="center">
-       <span id="view"> 상세설명</span> | <a href="../main/home">목록 </a>  | 
-       <span onclick="location='../work/apply?wid=${wvo.id}'">신청하기</span>  
+       <span id="view"> 상세설명</span> | <a href="../main/home">목록 </a>
+       
+        <!-- 유저가 신청한건지 확인용 apply=0 => 신청가능 1=> 이미신청함 -->
+       <c:if test="${apply!=1}">
+        |   <span onclick="apply()">신청하기</span>
+       </c:if>
+       <c:if test="${apply==1}">
+        |   <b style="text-decoration:line-through;">신청완료</b>
+       </c:if>   
+     
      </td>
      
     </table>

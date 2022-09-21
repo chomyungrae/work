@@ -21,7 +21,14 @@ public class WorkServiceImpl implements WorkService {
 	public String work_content(HttpServletRequest request, Model model, HttpSession session) {
 		
 		String id=request.getParameter("id");
+		if(session.getAttribute("userid")!=null)
+		{
+			String userid=session.getAttribute("userid").toString();
+			model.addAttribute("apply",mapper.check_apply(id,userid)); // 유저가 신청한건지 확인용 apply=0 => 신청가능 1=> 이미신청함
+		}
+		
 		model.addAttribute("wvo",mapper.work_content(id));
+
 		return "/work/work_content";
 	}
 
@@ -45,6 +52,7 @@ public class WorkServiceImpl implements WorkService {
 		}
 		
 	}
+
 
 	
 }

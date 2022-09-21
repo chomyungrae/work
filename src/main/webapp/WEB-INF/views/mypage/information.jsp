@@ -147,7 +147,15 @@ width:150px;
   </div>
 
  <div id="tb"> 
-  <form method="post" name="pom" action="info_input_ok">
+ 
+  <c:if test="${empty ivo}">
+   <c:set var="action" value="info_input_ok"/>
+  </c:if>
+   <c:if test="${!empty ivo}">
+    <c:set var="action" value="info_update_ok"/>
+  </c:if> 
+  
+  <form method="post" name="pom" action="${action}">
   <table id="tb1" width="800" align="center">
   <caption><h3 align="left" class="chu">추가사항</h3></caption>
   <tr>
@@ -206,7 +214,7 @@ width:150px;
 
 
 </div>
- <div id="end"><input type="submit" value="작성"></div>
+ <div id="end"><input type="submit" value="등록"></div>
 </form>
 </section>
 </body>

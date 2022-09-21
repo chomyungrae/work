@@ -5,9 +5,13 @@
   <mapper namespace="kr.co.work.mapper.WorkMapper">
   
    <select id="work_content" resultType="kr.co.work.vo.WorkVO">
-    select * from work where id=#{param1}
+   select * from work where id=#{param1}
    </select>
    
+   <select id="check_apply" resultType="Integer">
+  select count(*) from work as w,apply as a 
+  where w.id=a.workid and w.id=#{param1} and userid=#{param2};
+   </select>
     <select id="getApply" resultType="Integer">
     select count(*) from apply where userid=#{param1} and workid=#{param2}
     </select>

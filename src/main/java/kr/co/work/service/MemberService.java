@@ -27,18 +27,6 @@ public interface MemberService {
 	public void searching_userid(HttpServletRequest request,PrintWriter out);
 	public void searching_pwd(HttpServletRequest request,PrintWriter out);
      
-	// mypage
-		public String myinfo(HttpSession session,Model model);
-		public String pwd_change_ok(HttpServletRequest request,HttpSession session);
-		public String my_update(HttpSession session,Model model);
-		public String my_update_ok(MemberVO mvo,HttpSession session);
-		public String member_out_ok(HttpSession session,HttpServletRequest request);
-   
-		public String my_apply(Model model,HttpSession session);
-		   
-		public String information(Model model,HttpSession session);
-		public String info_input_ok(InfoVO ivo,HttpSession session);
-
-
+	
 		
 }

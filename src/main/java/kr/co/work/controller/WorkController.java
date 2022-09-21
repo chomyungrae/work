@@ -29,4 +29,11 @@ public class WorkController {
     {
     	return service.apply(session,request);
     }
+    
+    //일일알바 리스트
+    @RequestMapping("work/shortwork")
+    public String shortwork()
+    {
+    	return "work/shortwork";
+    }
 }
