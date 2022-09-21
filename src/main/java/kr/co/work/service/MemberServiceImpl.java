@@ -217,6 +217,7 @@ public class MemberServiceImpl implements MemberService {
 			
             String userid=session.getAttribute("userid").toString();		
 			ivo.setUserid(userid);
+		
 			mapper.info_input_ok(ivo);
 			return "redirect:/mypage/information";
 		}
