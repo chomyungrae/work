@@ -68,7 +68,21 @@
 </style>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
-
+ 
+ onload=function(){
+  
+	 if(<%=request.getParameter("cnt")%>=="1")
+ 	 {
+		 alert("이미 신청한 근무지입니다");
+ 	 }
+	 else if(<%=request.getParameter("ok")%>=="1")
+ 	 {
+		 alert("신청완료 \n 담당자확인후 연락드리겠습니다");
+ 	 }
+		 
+ }
+ 
+ 
  $(function(){
 	 $("#view").click(function(){
 		 $("#detail").slideToggle();
@@ -76,15 +90,8 @@
 	
  });
  
- function apply(){
-  
-	 confirm("${wvo.workday}일 ${wvo.workname} 근무를 신청하시겠습니까?")
-			 {
-		   alert("   신청완료\n담당자 확인 후 연락드리겠습니다");
-		   location="../work/apply?wid=${wvo.id}";
-			 }
-	 
- }
+ 
+
 </script>
 </head>
 <body>
@@ -142,7 +149,8 @@
   
     <tr>
      <td colspan="2" align="center">
-       <span id="view"> 상세설명</span> | <a href="../main/home">목록 </a>  | <span onclick="apply()">신청하기</span>  
+       <span id="view"> 상세설명</span> | <a href="../main/home">목록 </a>  | 
+       <span onclick="location='../work/apply?wid=${wvo.id}'">신청하기</span>  
      </td>
      
     </table>

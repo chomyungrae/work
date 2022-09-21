@@ -64,7 +64,7 @@ section {
 <body>
 <section>
  <div id="myTab">
- <a class="tab" href="myinfo">회원정보</a><a class="tab" href="information">이력서관리</a><a class="tab" href="#">지원내역</a>
+ <a class="tab" href="myinfo">회원정보</a><a class="tab" href="information">이력서관리</a><a class="tab" href="my_apply">신청내역</a>
   </div>
  <div id="tb"> 
   <table width="800" align="center">
@@ -105,6 +105,23 @@ section {
   </tr>
  </table>
 </div>
+
+<!-- <script>
+ function check(my)
+ {
+	 
+	 if(my.haha.value !=checked)
+		 {
+		 alert("하나선택하세요");
+		 return false;
+		 }
+ }
+</script>
+ <form method="post" action="aa" onsubmit="return check(this)">
+  1번<input type="radio" name="haha" value="0"><p>
+  1번<input type="radio" name="haha" value="2" checked>
+  <input type="submit" value="전송">
+ </form> -->
 </section>
 </body>
 </html>

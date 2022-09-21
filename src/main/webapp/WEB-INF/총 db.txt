@@ -26,8 +26,7 @@ inwon int,
 state int default 0,
 writeday date,
 day int,
-paytype int,
-apply char(255));
+paytype int);
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 

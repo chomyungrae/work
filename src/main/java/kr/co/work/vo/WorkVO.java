@@ -9,8 +9,28 @@ public class WorkVO {
 
  private int day; // 월,화,수,목..
  
+//apply 테이블
+ private int astate;
+private String awriteday,userid;
 
-
+public int getAstate() {
+	return astate;
+}
+public void setAstate(int astate) {
+	this.astate = astate;
+}
+public String getAwriteday() {
+	return awriteday;
+}
+public void setAwriteday(String awriteday) {
+	this.awriteday = awriteday;
+}
+public String getUserid() {
+	return userid;
+}
+public void setUserid(String userid) {
+	this.userid = userid;
+}
 public int getPaytype() {
 	return paytype;
 }

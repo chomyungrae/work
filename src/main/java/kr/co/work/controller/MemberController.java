@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.co.work.service.MemberService;
+import kr.co.work.vo.InfoVO;
 import kr.co.work.vo.MemberVO;
 
 @Controller
@@ -136,11 +137,23 @@ public class MemberController {
 	    	return service.member_out_ok(session,request);
 	    }
 	    
-	   @RequestMapping("/mypage/information")
-	   public String information()
+	 
+	   @RequestMapping("/mypage/my_apply")
+	   public String my_apply(Model model,HttpSession session)
 	   {
-		   return "/mypage/information";
+		   return service.my_apply(model,session);
 	   }
 	   
+	   @RequestMapping("/mypage/information")
+	   public String information(Model model,HttpSession session)
+	   {
+		   return service.information(model,session);
+	   }
+	   
+	   @RequestMapping("/mypage/info_input_ok")
+	   public String info_input_ok(InfoVO ivo,HttpSession session)
+	   {
+		   return service.info_input_ok(ivo,session);
+	   }
 	   
 }
