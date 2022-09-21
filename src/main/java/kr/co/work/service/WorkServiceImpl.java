@@ -25,28 +25,26 @@ public class WorkServiceImpl implements WorkService {
 		return "/work/work_content";
 	}
 
-	@Override // 회원이 content에서 일자리 신청했을경우 처리 
+	@Override
 	public String apply(HttpSession session, HttpServletRequest request) {
-		 
+		
 		String userid=session.getAttribute("userid").toString();
-		String wid=request.getParameter("wid");
+		String workid=request.getParameter("wid");
 		
-		String dbapply=mapper.getApply(wid);
+		//cnt = 중복신청체크 0이면 신청가능 1이면 이미신청
+		int cnt=mapper.getApply(userid,workid);
 		
-		String inapply;
-		
-		if(dbapply==null) // 빈값일떄 id1
+		if(cnt==0)
+		  {
+			mapper.apply_add(userid,workid);
+			return "redirect:/work/work_content?ok=1&id="+workid;
+		  }
+		else 
 		{
-			inapply=userid;
-		}
-		else // 값있을떄 id1+","+id2;
-		{
-			inapply=dbapply+","+userid; 
+			return "redirect:/work/work_content?cnt=1&id="+workid;
 		}
 		
-		mapper.apply(inapply,wid);
-		
-		return "redirect:/work/work_content?id="+wid;
 	}
 
+	
 }

@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import kr.co.work.mapper.MemberMapper;
+import kr.co.work.vo.InfoVO;
 import kr.co.work.vo.MemberVO;
 import kr.co.work.vo.WorkVO;
 
@@ -199,9 +200,29 @@ public class MemberServiceImpl implements MemberService {
 		@Override
 		public String my_apply(Model model,HttpSession session) {
 			String userid=session.getAttribute("userid").toString(); 
-			mapper.my_apply(userid);
+			model.addAttribute("list",mapper.my_apply(userid));
 			return "mypage/my_apply";
 		}
+
+		
+		@Override
+		public String information(Model model,HttpSession session) {
+			String userid=session.getAttribute("userid").toString(); 
+			model.addAttribute("ivo",mapper.information(userid));
+			return "/mypage/information";
+		}
+
+		@Override
+		public String info_input_ok(InfoVO ivo,HttpSession session) {
+			
+            String userid=session.getAttribute("userid").toString();		
+			ivo.setUserid(userid);
+			mapper.info_input_ok(ivo);
+			return "redirect:/mypage/information";
+		}
+
+
+	
 
 		
 		

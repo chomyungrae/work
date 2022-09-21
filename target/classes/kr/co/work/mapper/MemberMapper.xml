@@ -53,6 +53,15 @@
   
   
   <select id="my_apply" resultType="kr.co.work.vo.WorkVO">
-   select * from work where userid=#{parma1}
+  select w.*,a.state as astate,a.writeday as awriteday,a.userid from apply as a,work as w 
+  where w.id=a.workid and userid=#{param1} order by w.workday asc
   </select>
+  
+  <select id="information" resultType="kr.co.work.vo.InfoVO">
+   select * from info where userid=#{param1}
+  </select>  
+  <insert id="info_input_ok">
+   insert into info(userid,bank,account,photo,info_title,info_content)
+   values(#{userid},#{bank},#{account},#{photo},#{info_title},#{info_content})
+  </insert>
   </mapper>

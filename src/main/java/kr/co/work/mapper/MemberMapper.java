@@ -2,6 +2,8 @@ package kr.co.work.mapper;
 
 import java.util.ArrayList;
 
+import kr.co.work.vo.ApplyVO;
+import kr.co.work.vo.InfoVO;
 import kr.co.work.vo.MemberVO;
 import kr.co.work.vo.WorkVO;
 
@@ -31,4 +33,7 @@ public interface MemberMapper {
     public void member_state1(String userid);
     
     public ArrayList<WorkVO> my_apply(String userid);
+   
+    public InfoVO information(String userid);
+    public void info_input_ok(InfoVO ivo);
 }

@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.ui.Model;
 
+import kr.co.work.vo.InfoVO;
 import kr.co.work.vo.MemberVO;
 
 public interface MemberService {
@@ -34,5 +35,10 @@ public interface MemberService {
 		public String member_out_ok(HttpSession session,HttpServletRequest request);
    
 		public String my_apply(Model model,HttpSession session);
+		   
+		public String information(Model model,HttpSession session);
+		public String info_input_ok(InfoVO ivo,HttpSession session);
 
+
+		
 }

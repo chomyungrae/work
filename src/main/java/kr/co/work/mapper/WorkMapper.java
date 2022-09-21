@@ -6,7 +6,7 @@ public interface WorkMapper {
 
 	public WorkVO work_content(String id);
 	
-	public String getApply(String wid);
-	public void apply(String inapply,String wid);
+	public int getApply(String userid,String workid);
+	public void apply_add(String userid,String workid);
 
 }

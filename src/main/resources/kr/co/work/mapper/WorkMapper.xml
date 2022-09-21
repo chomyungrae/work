@@ -8,13 +8,14 @@
     select * from work where id=#{param1}
    </select>
    
-    <select id="getApply" resultType="String">
-    select apply from work where id=#{param1}
+    <select id="getApply" resultType="Integer">
+    select count(*) from apply where userid=#{param1} and workid=#{param2}
     </select>
     
-    <update id="apply">
-     update work set apply=#{param1} where id=#{param2}
-    </update>
     
-
+    <insert id="apply_add">
+    insert into apply(userid,workid,state,writeday)
+     values(#{param1},#{param2},1,now())
+    </insert> 
+   
   </mapper>

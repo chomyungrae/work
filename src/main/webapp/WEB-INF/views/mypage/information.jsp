@@ -94,10 +94,32 @@ section {
 {
 width:150px;
 }
+ section #end{
+
+ width:60%;
+ height:50px;
+  margin:auto;
+  text-align:center;
+ }
+ section #end input{
+  width:400px;
+  height:50px;
+  font-size:22px;
+ }
 
 </style>
 <script>
-
+ 
+ onload=function(){
+	 <c:if test="${empty ivo.bank}">
+	  document.pom.bank.value=="0";
+	 </c:if>
+	 <c:if test="${!empty ivo.bank}">
+	  document.pom.bank.value="${ivo.bank}";
+	 </c:if>
+ 	 
+ }
+ 
  function form_add() // 경력사항 추가 최대3개
  {
 	 var tb2=document.getElementsByClassName("tb2");
@@ -125,15 +147,16 @@ width:150px;
   </div>
 
  <div id="tb"> 
+  <form method="post" name="pom" action="info_input_ok">
   <table id="tb1" width="800" align="center">
   <caption><h3 align="left" class="chu">추가사항</h3></caption>
   <tr>
    <td>지급받으실 계좌</td>
    <td>
    <select name="bank">
-    <option value="0">선택</option><option value="1">신한</option><option value="2">우리</option><option value="3">국민</option><option value="4">농협</option>
+    <option value="0">선택</option><option>신한</option><option>우리</option><option>국민</option><option>농협</option>
    </select>
-    <input type="text" name="account" placeholder="계좌번호">
+    <input type="text" name="account" placeholder="계좌번호" value="${ivo.account}">
    </td>  
   </tr>
    <tr>
@@ -146,17 +169,17 @@ width:150px;
   </tr>
   <tr>
    <td>이력서 제목</td>
-   <td><input type="text" name="info_title"></td>
+   <td><input type="text" name="info_title" value="${ivo.info_title}"></td>
   </tr>
   <tr>
    <td>내용(간단히)</td>
-   <td><textarea cols="40" rows="4"></textarea></td>
+   <td><textarea cols="40" rows="4" name="info_content">${ivo.info_content}</textarea></td>
   </tr>
  </table>
   
   <div id="outer">
   <div id="aa">
-  <table class="tb2" id="tb2" width="800" align="center">
+    <table class="tb2" id="tb2" width="800" align="center">
   <caption><span id="left">경력사항<font size="3px">(근무경력 있는 분만 작성)</font></span>
   <span class="add" onclick="form_add()">+경력추가</span></caption>
    <tr>
@@ -177,29 +200,14 @@ width:150px;
    <td colspan="2" align="center" height="80">
    <input class="del" type="button" onclick="form_del()" value="삭제"></td> 
   </tr>
-  </table>
+    </table>
    </div>
   </div>
 
-<style>
- section #end{
-
- width:60%;
- height:50px;
-  margin:auto;
-  text-align:center;
- }
- section #end input{
-  width:400px;
-  height:50px;
-  font-size:22px;
- }
-
-</style>
 
 </div>
  <div id="end"><input type="submit" value="작성"></div>
-
+</form>
 </section>
 </body>
 </html>
