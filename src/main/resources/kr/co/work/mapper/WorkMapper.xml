@@ -22,4 +22,18 @@
      values(#{param1},#{param2},1,now())
     </insert> 
    
+   <select id="getchong" resultType="Integer">
+   select ceil(count(*)/10) from work where day like concat('%',#{param1},'%')  
+   </select>
+   
+   <select id="shortwork_list" resultType="kr.co.work.vo.WorkVO">
+    select * from work where day like concat('%',#{param1},'%') order by workday asc limit #{param2},#{param3}
+   </select>
+ 
+   <insert id="dobae">
+     insert into work(workday,day,workname,workplace,content,start_time,close_time,inwon,gender,pay,writeday,paytype)
+   values('2022-09-24',6,'신라호텔','운정동','연회업무 및 정리정돈','09:00','18:00',4,0,90000,now(),0)
+   </insert>
+   
+   
   </mapper>

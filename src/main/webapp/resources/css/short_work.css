@@ -1,0 +1,317 @@
+@charset "UTF-8";
+#fourth {
+	width: 80%;
+	height: 300px;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+#fourth #inner {
+	width: 200%;
+	height: 300px;
+}
+
+/* #fourth .login{
+ width:22%;
+   height:230px;
+   display:inline;
+ position: absolute;
+  } */
+#fourth .login input {
+	width: 150px;
+	height: 22px;
+}
+
+#fourth .login input[type=submit] {
+	width: 80px;
+	height: 50px;
+	display: inline-block;
+	padding: 1em 2em;
+	border-radius: 30px;
+	color: #b2876f;
+	font-weight: bold;
+	font-size: 0.678rem;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: linear-gradient(to right, rgba(#b2876f, 0) 25%,
+		rgba(#b2876f, .8) 75%);
+	background-position: 1% 50%;
+	background-size: 400% 300%;
+	border: 1px solid #b2876f;
+}
+
+#list {
+	width: 80%;
+	height: 600px;
+	/* background: yellow; */
+	margin: auto;
+}
+
+
+
+
+/*  */
+#list li {
+	list-style: none;
+	display: inline-block;
+	
+}
+#list #tab{
+ width:80%;
+ height:70px;
+ margin:auto;
+ padding-top:20px;
+ border-bottom:8px solid red;
+ /* box-shadow : 2px 3px 5px 0px; */ 
+}
+
+#tab .left{
+ float:left;
+}
+
+
+
+#tab .right{
+float:right;
+padding-top:15px;
+padding-right:20px;
+}
+
+/*  */
+.tabBtn {
+	font-weight:bold;
+	text-decoration:none;
+	font-family:Arial;
+	box-shadow:inset #ff0037 9px 5px 8px -1px,#a69ea6 1px 5px 2px;
+	o-box-shadow:inset #ff0037 9px 5px 8px -1px,#a69ea6 1px 5px 2px;
+	-moz-box-shadow:inset #ff0037 9px 5px 8px -1px,#a69ea6 1px 5px 2px;
+	-webkit-box-shadow:inset #ff0037 9px 5px 8px -1px,#a69ea6 1px 5px 2px;
+	background:#f00000;
+	background:-o-linear-gradient(90deg, #f00000, #ff0055);
+	background:-moz-linear-gradient( center top, #f00000 5%, #ff0055 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f00000), color-stop(1, #ff0055) );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f00000', endColorstr='#ff0055');
+	background:-webkit-linear-gradient(#f00000, #ff0055);
+	background:-ms-linear-gradient(#f00000, #ff0055);
+	background:linear-gradient(#f00000, #ff0055);
+	text-indent:0px;
+	line-height:23px;
+	-moz-border-radius:14px 14px 0 0;
+	-webkit-border-radius:14px 14px 0 0;
+	border-radius:14px 14px 0 0;
+	text-align:center;
+	vertical-align:middle;
+	display:inline-block;
+	font-size:20px;
+	color:#ffffff;
+	width:172px;
+	height:20px;
+	padding:13px;
+	text-shadow:#ff0000 -1px -1px 0px;
+	border-color:#940000;
+	border-width:1px;
+	border-style:solid;
+}
+
+.tabBtn:active {
+	box-shadow:inset #ff0037 9px 5px 8px -1px,#a69ea6 1px 0 2px;
+	o-box-shadow:inset #ff0037 9px 5px 8px -1px,#a69ea6 1px 0 2px;
+	-moz-box-shadow:inset #ff0037 9px 5px 8px -1px,#a69ea6 1px 0 2px;
+	-webkit-box-shadow:inset #ff0037 9px 5px 8px -1px,#a69ea6 1px 0 2px;
+	position:relative;
+	top:5px
+}
+
+.tabBtn:hover {
+	background:#ff0055;
+	background:-o-linear-gradient(90deg, #ff0055, #f00000);
+	background:-moz-linear-gradient( center top, #ff0055 5%, #f00000 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff0055), color-stop(1, #f00000) );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0055', endColorstr='#f00000');
+	background:-webkit-linear-gradient(#ff0055, #f00000);
+	background:-ms-linear-gradient(#ff0055, #f00000);
+	background:linear-gradient(#ff0055, #f00000);
+}
+
+
+/*  오른쪽 요일 */
+
+.dayTotal {
+	font-weight:bold;
+	text-decoration:none;
+	font-family:굴림체;
+	box-shadow:inset #ffffff 0px 4px 18px 0px;
+	o-box-shadow:inset #ffffff 0px 4px 18px 0px;
+	-moz-box-shadow:inset #ffffff 0px 4px 18px 0px;
+	-webkit-box-shadow:inset #ffffff 0px 4px 18px 0px;
+	background:#ff003c;
+	background:-o-linear-gradient(90deg, #ff003c, #e83146);
+	background:-moz-linear-gradient( center top, #ff003c 5%, #e83146 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff003c), color-stop(1, #e83146) );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff003c', endColorstr='#e83146');
+	background:-webkit-linear-gradient(#ff003c, #e83146);
+	background:-ms-linear-gradient(#ff003c, #e83146);
+	background:linear-gradient(#ff003c, #e83146);
+	text-indent:0px;
+	line-height:0px;
+	-moz-border-radius:0 0 16px 16px;
+	-webkit-border-radius:0 0 16px 16px;
+	border-radius:0 100px 100px 0;
+	text-align:center;
+	vertical-align:middle;
+	display:inline-block;
+	font-size:18px;
+	color:#f0f0f0;
+	width:60px;
+	height:5px;
+	padding:13px;
+	border-color:#f296a1;
+	border-width:1px;
+	border-style:solid;
+}
+
+
+  .day {
+ 
+	font-weight:bold;
+	text-decoration:none;
+	font-family:굴림체;
+	box-shadow:inset #ffffff 0px 4px 18px 0px;
+	o-box-shadow:inset #ffffff 0px 4px 18px 0px;
+	-moz-box-shadow:inset #ffffff 0px 4px 18px 0px;
+	-webkit-box-shadow:inset #ffffff 0px 4px 18px 0px;
+	background:#ff003c;
+	background:-o-linear-gradient(90deg, #ff003c, #e83146);
+	background:-moz-linear-gradient( center top, #ff003c 5%, #e83146 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff003c), color-stop(1, #e83146) );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff003c', endColorstr='#e83146');
+	background:-webkit-linear-gradient(#ff003c, #e83146);
+	background:-ms-linear-gradient(#ff003c, #e83146);
+	background:linear-gradient(#ff003c, #e83146);
+	text-indent:0px;
+	line-height:0px;
+	-moz-border-radius:0 0 16px 16px;
+	-webkit-border-radius:0 0 16px 16px;
+	border-radius:0 0 16px 16px;
+	text-align:center;
+	vertical-align:middle;
+	display:inline-block;
+	font-size:13px;
+	color:#f0f0f0;
+	width:40px;
+	height:0px;
+	padding:13px;
+	border-color:#f296a1;
+	border-width:1px;
+	border-style:solid;
+}
+
+.day:active {
+	position:relative;
+	top:4px
+}
+
+.day:hover {
+	background:#e83146;
+	background:-o-linear-gradient(90deg, #e83146, #ff003c);
+	background:-moz-linear-gradient( center top, #e83146 5%, #ff003c 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e83146), color-stop(1, #ff003c) );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e83146', endColorstr='#ff003c');
+	background:-webkit-linear-gradient(#e83146, #ff003c);
+	background:-ms-linear-gradient(#e83146, #ff003c);
+	background:linear-gradient(#e83146, #ff003c);
+}
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+ work_list 테이블 출력부분
+  */
+  #list #worklist{
+ width:85%;
+ margin:auto;
+}
+#list #worklist table{
+  width:95%;
+ border-collapse :collapse;
+ text-align:center;
+}
+
+#list #worklist table td{
+ border-top:1px solid #cccccc;
+ height:40px;
+}
+  #worklist table tr:first-child{
+  height:60px;
+  font-weight:bold;
+  font-size:17px;
+  background:#F0F0F0;
+  }
+  #worklist table td:first-child{
+  }
+  
+  
+  
+  #state0 { /* 상태 0= '모집' 일경우 */
+  font-size:14px;
+   width:auto;
+   height:auto;
+   background:red;
+   color:white;
+   padding:4px;
+   line-height:16px;
+  }
+  #state1{ /* 상태 1= '마감' 일경우 */
+   font-weight:bold;
+   font-size:14px;
+  }
+/*  ㅡㅡㅡㅡㅡㅡㅡㅡ페이징버튼 css ㅡㅡㅡㅡㅡㅡㅡㅡ*/
+ .page_wrap {
+	text-align:center;
+	font-size:0;
+ }
+.page_nation {
+	display:inline-block;
+}
+.page_nation .none {
+	display:none;
+}
+.page_nation a {
+	display:block;
+	margin:0 3px;
+	float:left;
+	border:1px solid #e6e6e6;
+	width:28px;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	background-color:#fff;
+	font-size:13px;
+	color:#999999;
+	text-decoration:none;
+}
+.page_nation .arrow {
+	border:1px solid #ccc;
+}
+.page_nation .pprev {
+	background:#f8f8f8 url('../resources/main/page_pprev.png') no-repeat center center;
+	margin-left:0;
+}
+.page_nation .prev {
+	background:#f8f8f8 url('../resources/main/page_prev.png') no-repeat center center;
+	margin-right:7px;
+}
+.page_nation .next {
+	background:#f8f8f8 url('../resources/main/page_next.png') no-repeat center center;
+	margin-left:7px;
+}
+.page_nation .nnext {
+	background:#f8f8f8 url('../resources/main/page_nnext.png') no-repeat center center;
+	margin-right:0;
+}
+.page_nation a.active {
+	background-color:#42454c;
+	color:#fff;
+	border:1px solid #42454c;
+}

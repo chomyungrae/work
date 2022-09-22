@@ -32,8 +32,8 @@ public class WorkController {
     
     //일일알바 리스트
     @RequestMapping("work/shortwork")
-    public String shortwork()
+    public String shortwork(HttpServletRequest request,Model model)
     {
-    	return "work/shortwork";
+    	return service.shortwork_list(request,model);
     }
 }
