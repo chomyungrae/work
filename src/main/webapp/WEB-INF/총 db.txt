@@ -65,5 +65,6 @@ id int auto_increment primary key,
 title varchar(50),
 content text,
 writeday date,
-readnum int default 0
+readnum int default 0,
+state int default 0
 );

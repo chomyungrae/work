@@ -10,7 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link href="<c:url value="/resources/css/home.css" />" rel="stylesheet"> <!--  css 불러오기 -->
-<c:set var="height" value="${wlist.size()*48}"/>
+<c:set var="height" value="${wlist.size()*45+600}"/>
 <style>
 section{
  height:${height}px;

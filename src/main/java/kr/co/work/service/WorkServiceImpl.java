@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import kr.co.work.mapper.WorkMapper;
+import kr.co.work.vo.NoticeVO;
 import kr.co.work.vo.WorkVO;
 
 @Service
@@ -38,11 +39,12 @@ public class WorkServiceImpl implements WorkService {
 	@Override
 	public String apply(HttpSession session, HttpServletRequest request) {
 		
-		for(int i=0;i<48;i++) // 나중에삭제
+		/*for(int i=0;i<48;i++) // 나중에삭제
 		{
-			mapper.dobae();
+			for(int d=0;d<=6;d++)
+			mapper.dobae(d);
 		}
-		
+		*/
 		
 		String userid=session.getAttribute("userid").toString();
 		String workid=request.getParameter("wid");
@@ -131,6 +133,46 @@ public class WorkServiceImpl implements WorkService {
         
        model.addAttribute("day",day);
 		return "/work/shortwork";
+	}
+
+	
+	
+	//공지
+	
+	@Override
+	public String notice_list(Model model) {
+		 
+		model.addAttribute("list",mapper.notice_list());
+		  
+		return "/notice/notice_list";
+	}
+
+	@Override
+	public String notice_readnum(HttpServletRequest request) {
+		
+		String id=request.getParameter("id");
+		 mapper.notice_readnum(id);
+		return "redirect:/notice/notice_content?id="+id;
+		
+	}
+
+	@Override
+	public String notice_content(HttpServletRequest request,Model model) {
+		
+		String id=request.getParameter("id");
+		
+		NoticeVO nvo=mapper.notice_content(id);
+		nvo.setContent(nvo.getContent().replace("\r\n", "<br>"));
+		model.addAttribute("nvo",nvo);
+		 
+		
+		int prev_id=mapper.prev_id(id);  // xml에서 CDATA는 태그안에서는 전부 문자열로 치환시켜버리기 때문입니다 부등호 문자열
+		int next_id=mapper.next_id(id);
+		
+		model.addAttribute("prev_id",prev_id);
+		model.addAttribute("next_id",next_id);
+		
+		return "/notice/notice_content";
 	}
 
 

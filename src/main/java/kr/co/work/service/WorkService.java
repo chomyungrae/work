@@ -13,5 +13,10 @@ public interface WorkService {
     
     public String shortwork_list(HttpServletRequest request,Model model);
 
+    //공지
+	public String notice_list(Model model);
+    public String notice_readnum(HttpServletRequest request);
+    public String notice_content(HttpServletRequest request,Model model);
+
 
 }

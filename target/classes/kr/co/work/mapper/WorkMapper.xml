@@ -32,8 +32,23 @@
  
    <insert id="dobae">
      insert into work(workday,day,workname,workplace,content,start_time,close_time,inwon,gender,pay,writeday,paytype)
-   values('2022-09-24',6,'신라호텔','운정동','연회업무 및 정리정돈','09:00','18:00',4,0,90000,now(),0)
+   values('2022-09-24',#{param1},'신라호텔','운정동','연회업무 및 정리정돈','09:00','18:00',4,0,90000,now(),0)
    </insert>
    
-   
+   <select id="notice_list" resultType="kr.co.work.vo.NoticeVO">
+     select * from notice order by id desc limit 0,9
+   </select>
+   <update id="notice_readnum">
+    update notice set readnum=readnum+1 where id=#{param1}
+   </update>
+    
+    <select id="notice_content" resultType="kr.co.work.vo.NoticeVO">
+     select * from notice where id=#{param1}
+   </select>
+   <select id="prev_id" resultType="Integer">
+    <![CDATA[select id from notice where id < #{param1} order by id desc limit 1]]>
+   </select>
+   <select id="next_id" resultType="Integer">
+    <![CDATA[select id from notice where id > #{param1} order by id asc limit 1]]>
+   </select>
   </mapper>

@@ -36,4 +36,22 @@ public class WorkController {
     {
     	return service.shortwork_list(request,model);
     }
+    
+    //공지
+    @RequestMapping("/notice/notice_list")
+	public String notice_list(HttpServletRequest request,Model model)
+	{
+    	return service.notice_list(model);
+	}
+    
+    @RequestMapping("/notice/notice_readnum")
+    public String notice_readnum(HttpServletRequest request)
+    {
+    	return service.notice_readnum(request);
+    }
+    @RequestMapping("/notice/notice_content")
+    public String notice_content(HttpServletRequest request,Model model)
+    {
+    	return service.notice_content(request,model);
+    }
 }

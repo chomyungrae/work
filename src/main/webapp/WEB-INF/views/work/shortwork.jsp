@@ -9,8 +9,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link href="<c:url value="/resources/css/home.css" />" rel="stylesheet"> <!--  css 불러오기 -->
-
 <style>
 section{
  height:800px;
@@ -41,10 +39,7 @@ section{
 <div id="list">
    <div id="tab">
 			<div class="left">
-				<ul>
-					<li><a href="#none" class="tabBtn">하루알바 /일당지급</a></li>
-					<li><a href="#none" class="tabBtn">장단기 채용정보</a></li>
-				</ul>
+				일일 알바정보
 			</div>
 			<div class="right">
 				<ul>
