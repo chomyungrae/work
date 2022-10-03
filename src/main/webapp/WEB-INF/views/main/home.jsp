@@ -109,7 +109,7 @@ section{
 	   <!-- 알바리스트 출력부분 -->
 	   <c:forEach items="${wlist}" var="wvo">
 	   <tr>
-	    <td>${wvo.workday}</td>
+	    <td><b>${wvo.workday}</b></td>
 	    
 	    <c:if test="${wvo.day==0}"> <c:set var="day" value="일"/></c:if>
 	     <c:if test="${wvo.day==1}"> <c:set var="day" value="월"/> </c:if>
@@ -118,7 +118,7 @@ section{
 	     <c:if test="${wvo.day==4}"><c:set var="day" value="목"/></c:if>
 	     <c:if test="${wvo.day==5}"><c:set var="day" value="금"/></c:if>
 	    <c:if test="${wvo.day==6}"><c:set var="day" value="토"/></c:if>
-	  <td>${day}</td>
+	  <td><b>${day}</b></td>
 	  
 	  
 	    <td>${wvo.workname}</td>

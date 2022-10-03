@@ -117,9 +117,10 @@ width:150px;
 	 <c:if test="${!empty ivo.bank}">
 	  document.pom.bank.value="${ivo.bank}";
 	 </c:if>
- 	 
+	 document.getElementsByClassName("tab")[1].style.marginTop="30px";
  }
- 
+
+
  function form_add() // 경력사항 추가 최대3개
  {
 	 var tb2=document.getElementsByClassName("tb2");
