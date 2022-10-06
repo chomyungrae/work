@@ -45,10 +45,10 @@
     <select id="notice_content" resultType="kr.co.work.vo.NoticeVO">
      select * from notice where id=#{param1}
    </select>
-   <select id="prev_id" resultType="Integer">
+  <!--  <select id="prev_id" resultType="Integer">
     <![CDATA[select id from notice where id < #{param1} order by id desc limit 1]]>
    </select>
    <select id="next_id" resultType="Integer">
     <![CDATA[select id from notice where id > #{param1} order by id asc limit 1]]>
-   </select>
+   </select> -->
   </mapper>

@@ -166,12 +166,12 @@ public class WorkServiceImpl implements WorkService {
 		model.addAttribute("nvo",nvo);
 		 
 		
-		int prev_id=mapper.prev_id(id);  // xml에서 CDATA는 태그안에서는 전부 문자열로 치환시켜버리기 때문입니다 부등호 문자열
+		/*int prev_id=mapper.prev_id(id);  // xml에서 CDATA는 태그안에서는 전부 문자열로 치환시켜버리기 때문입니다 부등호 문자열
 		int next_id=mapper.next_id(id);
 		
 		model.addAttribute("prev_id",prev_id);
 		model.addAttribute("next_id",next_id);
-		
+		*/
 		return "/notice/notice_content";
 	}
 
