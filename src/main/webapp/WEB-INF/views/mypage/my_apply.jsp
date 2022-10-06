@@ -45,12 +45,14 @@ section {
    border-spacing: 0 10px;
  
  }
+ section #tb td{
+  border-bottom:1px solid #3d88eb;
+ }
  #tb table tr:first-child td{
   border-top:0px;
  }
  #tb table td:first-child{
    width:150px;
-   border-top:1px solid #3d88eb;
    font-weight:bold;
  }
   #tb table td:last-child{
@@ -66,6 +68,11 @@ section {
  background:#eeeeee;
 }
 </style>
+<script>
+onload=function(){
+	  document.getElementsByClassName("tab")[2].style.marginTop="30px";
+}
+</script>
 </head>
 <body>
 <section>
